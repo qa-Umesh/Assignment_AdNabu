@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="methods" thread-count="5">
+	<test name="Test">
+		<parameter name="browser" value="${browser}"></parameter>
+		<parameter name="isheadless" value="${isheadless}"></parameter>
+		<classes>
+			<class name="com.ui.test.AddToCartTest" />
+			<class name="com.ui.test.SearchProductTest" />
+			<class name="com.ui.test.LoginTest" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

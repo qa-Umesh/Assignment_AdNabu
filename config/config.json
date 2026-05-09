@@ -1,0 +1,22 @@
+{
+	"environment":{
+		
+		"QA":{
+			"url":"https://adnabu-store-assignment1.myshopify.com/",
+			"MAX_NO_OF_ATTEMP":2
+		},
+		
+		"DEV":{
+			"url":"https://adnabu-store-assignment1.myshopify.com/",
+			"MAX_NO_OF_ATTEMP":2
+
+		},
+		
+		"UAT":{
+			"url":"https://adnabu-store-assignment1.myshopify.com/",
+			"MAX_NO_OF_ATTEMP":2
+
+		}
+		
+	}
+}
