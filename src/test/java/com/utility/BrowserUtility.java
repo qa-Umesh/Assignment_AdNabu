@@ -48,6 +48,8 @@ public abstract class BrowserUtility {
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("--headless=old");
 				options.addArguments("--window-size=1920,1080");
+				options.addArguments("--no-sandbox");
+				options.addArguments("--disable-dev-shm-usage");
 				localDriver.set(new ChromeDriver(options));
 				wait = new WebDriverWait(localDriver.get(), Duration.ofSeconds(20));
 			} else if (browserName == Browser.FIREFOX) {
@@ -62,6 +64,9 @@ public abstract class BrowserUtility {
 
 			if (browserName == Browser.CHROME) {
 				logger.info("Opening Browser: " + browserName);
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--no-sandbox");
+				options.addArguments("--disable-dev-shm-usage");
 				localDriver.set(new ChromeDriver());
 				wait = new WebDriverWait(localDriver.get(), Duration.ofSeconds(20));
 			} else if (browserName == Browser.FIREFOX) {
