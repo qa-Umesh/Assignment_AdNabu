@@ -48,8 +48,6 @@ public abstract class BrowserUtility {
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("--headless=old");
 				options.addArguments("--window-size=1920,1080");
-				options.addArguments("--no-sandbox");
-				options.addArguments("--disable-dev-shm-usage");
 				localDriver.set(new ChromeDriver(options));
 				wait = new WebDriverWait(localDriver.get(), Duration.ofSeconds(20));
 			} else if (browserName == Browser.FIREFOX) {
@@ -67,10 +65,15 @@ public abstract class BrowserUtility {
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("--no-sandbox");
 				options.addArguments("--disable-dev-shm-usage");
+				options.addArguments("--window-size=1920,1080");
 				localDriver.set(new ChromeDriver());
 				wait = new WebDriverWait(localDriver.get(), Duration.ofSeconds(20));
 			} else if (browserName == Browser.FIREFOX) {
 				logger.info("Opening Browser: " + browserName);
+				FirefoxOptions options = new FirefoxOptions();
+				options.addArguments("--no-sandbox");
+				options.addArguments("--disable-dev-shm-usage");
+				options.addArguments("--window-size=1920,1080");
 				localDriver.set(new FirefoxDriver());
 				wait = new WebDriverWait(localDriver.get(), Duration.ofSeconds(20));
 			}
@@ -122,7 +125,6 @@ public abstract class BrowserUtility {
 
 	public String getScreenshot(String screenShotName) {
 
-		
 		String filePath = System.getProperty("user.dir") + File.separator + "screenshots" + File.separator
 				+ screenShotName + ".png";
 		File Destination = new File(filePath);
