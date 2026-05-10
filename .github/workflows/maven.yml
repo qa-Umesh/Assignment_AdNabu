@@ -45,7 +45,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: html-report
-          path: Reports/reports.html
+          path: Reports/Reports.html
 
       - name: Test Execution Completed
         if: always()
