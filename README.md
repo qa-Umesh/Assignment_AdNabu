@@ -7,7 +7,7 @@ The framework automates the following e-commerce workflow:
 - Search for a product
 - Add product to cart successfully
 
-The project is designed with reusable components, utility classes, reporting, logging, screenshots, and GitHub Actions integration following automation testing best practices.
+The project is designed with reusable components, reporting, logging, screenshots, and GitHub Actions integration following automation best practices.
 
 ---
 
@@ -16,7 +16,7 @@ The project is designed with reusable components, utility classes, reporting, lo
 This framework includes:
 
 - Selenium WebDriver automation
-- TestNG test execution
+- TestNG execution
 - Page Object Model (POM)
 - Explicit waits (No hardcoded sleeps)
 - Reusable utility methods
@@ -81,74 +81,124 @@ src
  ├── screenshots
  ├── Reports
  └── logs
-✅ Features
-Page Object Model (POM) architecture
-Modular and reusable framework
-Explicit waits implementation
-Screenshot capture on failures
-Extent HTML Reports
-Logging using Log4j
-Maven Surefire execution
-GitHub Actions integration
-Clean and maintainable code structure
-⚙️ Prerequisites
+```
 
-Before running the project, ensure you have installed:
+---
 
-Java 11 or above
-Maven
-Git
-Chrome Browser
-📥 Installation & Setup
-Clone Repository
+# ✅ Features
+
+- Page Object Model (POM) architecture
+- Modular and reusable framework
+- Explicit waits implementation
+- Screenshot capture on failures
+- Extent HTML Reports
+- Logging using Log4j
+- Maven Surefire execution
+- GitHub Actions integration
+- Clean and maintainable code structure
+
+---
+
+# ⚙️ Prerequisites
+
+Before running the project, ensure the following tools are installed:
+
+- Java 11 or above
+- Maven
+- Git
+- Google Chrome Browser
+
+---
+
+# 📥 Installation & Setup
+
+## Step 1: Clone Repository
+
+```bash
 git clone https://github.com/qa-Umesh/Assignment_AdNabu.git
+```
+
+---
+
+## Step 2: Navigate to Project Folder
+
+```bash
 cd Assignment_AdNabu
-▶️ Run Tests
+```
 
-Execute the automation suite using:
+---
 
+# ▶️ Execute Automation Tests
+
+Run the following command to execute the automation suite:
+
+```bash
 mvn clean test -Dbrowser=chrome -Disheadless=true
-📊 Test Reports
+```
+
+---
+
+# 📊 Test Reports
 
 The framework generates Extent HTML Reports after execution.
 
 You can view the latest published report here:
 
-https://qa-umesh.github.io/Assignment_AdNabu/Report.html
+👉 https://qa-umesh.github.io/Assignment_AdNabu/Report.html
 
-📸 Screenshots
+---
+
+# 📸 Screenshots
 
 Failure screenshots are automatically captured inside:
 
+```text
 /screenshots/
-📝 Logging
+```
+
+---
+
+# 📝 Logging
 
 Execution logs are generated inside:
 
+```text
 /logs/automation.log
-🤖 GitHub Actions Integration
+```
+
+---
+
+# 🤖 GitHub Actions Integration
 
 This project is integrated with GitHub Actions for automated execution.
 
 The workflow:
+- Executes automation tests
+- Generates Extent Reports
+- Publishes reports to GitHub Pages automatically
 
-Executes tests automatically
-Generates Extent Reports
-Publishes reports to GitHub Pages
-🌐 GitHub Repository
+---
+
+# 🌐 GitHub Repository
 
 Repository Link:
 
-https://github.com/qa-Umesh/Assignment_AdNabu
+👉 https://github.com/qa-Umesh/Assignment_AdNabu
 
-📌 Assignment Coverage
-Automated Scenario Covered
+---
 
-✅ Search product successfully
+# 📌 Assignment Coverage
+
+## Automated Scenario Covered
+
+✅ Search product successfully  
 ✅ Add product to cart successfully
 
-📌 Notes
-This framework was developed specifically for the AdNabu QA Assignment.
-The framework focuses on readability, maintainability, and automation best practices.
-No hardcoded waits (Thread.sleep) are used in the framework.
-Reports are automatically published using GitHub Pages for easy access.
+---
+
+# 📌 Notes
+
+- This framework was developed specifically for the AdNabu QA Assignment.
+- The framework focuses on readability, maintainability, and automation best practices.
+- No hardcoded waits (`Thread.sleep`) are used in the framework.
+- Reports are automatically published using GitHub Pages for easy access.
