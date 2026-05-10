@@ -125,8 +125,7 @@ public abstract class BrowserUtility {
 
 	public String getScreenshot(String screenShotName) {
 
-		String filePath = System.getProperty("user.dir") + File.separator + "screenshots" + File.separator
-				+ screenShotName + ".png";
+		String filePath = ".screenshots" + File.separator + screenShotName + ".png";
 		File Destination = new File(filePath);
 		TakesScreenshot ts = (TakesScreenshot) localDriver.get();
 		File sourceFile = ts.getScreenshotAs(OutputType.FILE);
