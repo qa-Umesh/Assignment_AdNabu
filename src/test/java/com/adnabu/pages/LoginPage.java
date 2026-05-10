@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import com.adnabu.constants.Browser;
 import com.adnabu.constants.Env;
 import com.adnabu.utility.BrowserUtility;
-import com.adnabu.utility.JSONReaderUtility;
 import com.adnabu.utility.PropertiesReaderUtility;
 
 public class LoginPage extends BrowserUtility {

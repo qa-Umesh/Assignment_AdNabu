@@ -5,9 +5,9 @@
 		<parameter name="browser" value="${browser}"></parameter>
 		<parameter name="isheadless" value="${isheadless}"></parameter>
 		<classes>
-			<class name="com.ui.test.AddToCartTest" />
-			<class name="com.ui.test.SearchProductTest" />
-			<class name="com.ui.test.LoginTest" />
+			<class name="com.adnabu.test.AddToCartTest" />
+			<class name="com.adnabu.test.SearchProductTest" />
+			<class name="com.adnabu.test.LoginTest" />
 		</classes>
 	</test> <!--
 	Test -->

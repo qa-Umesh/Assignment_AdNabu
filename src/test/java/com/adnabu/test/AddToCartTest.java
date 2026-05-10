@@ -1,14 +1,10 @@
 package com.adnabu.test;
 
+import org.testng.AssertJUnit;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.adnabu.pages.ProductPage;
-
-import org.testng.AssertJUnit;
-import static org.testng.Assert.assertEquals;
-
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 public class AddToCartTest extends BaseTest {
 
@@ -21,7 +17,7 @@ public class AddToCartTest extends BaseTest {
 	}
 
 	@Test(description = "Verify that valid user is able to add product into the cart")
-	public void AddProductToCart() {
+	public void AddProductToCartTest() {
 		AssertJUnit.assertEquals(productPage.addProductToCart().getAddToCartConfirmation(), "Your cart");
 	}
 
