@@ -12,16 +12,14 @@ public class ProductPage extends BrowserUtility {
 	}
 
 	private static final By ADD_TO_CART_BUTTON_LOCATOR = By.xpath("//button[contains(@id,'ProductSubmitButton')]");
-	private static final By ADD_TO_CART_TEXT_LOCATOR=By.xpath("//h2[contains(text(),\"Your cart\")]");
 
 	public ProductPage addProductToCart() {
 		clickOn(ADD_TO_CART_BUTTON_LOCATOR);
-		ProductPage productPage = new ProductPage(getDiver());
-		return productPage;
+		return new ProductPage(getDiver());
 	}
-	
-	public String getAddToCartConfirmation() {
-		return getVisibleText(ADD_TO_CART_TEXT_LOCATOR);
+
+	public String getCartConfirmationMessage(String productName) {
+		return getVisibleText(getProductLocator(productName));
 	}
 
 }

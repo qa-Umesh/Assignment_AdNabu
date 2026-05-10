@@ -24,8 +24,7 @@ public class HomePage extends BrowserUtility {
 		clickOn(SEARCH_ICON_LOCATOR);
 		enterText(SEARCH_TEXT_BOX_LOCATOR, ProductName);
 		specialKey(SEARCH_TEXT_BOX_LOCATOR, Keys.ENTER);
-		SearchResultPage searchResultPage = new SearchResultPage(getDiver());
-		return searchResultPage;
+		return new SearchResultPage(getDiver());
 	}
 
 }

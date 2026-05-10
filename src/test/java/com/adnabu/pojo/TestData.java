@@ -3,7 +3,7 @@ package com.adnabu.pojo;
 import java.util.List;
 
 public class TestData {
-	List<User> data;
+	private List<User> data;
 
 	public List<User> getData() {
 		return data;
@@ -12,7 +12,5 @@ public class TestData {
 	public void setData(List<User> data) {
 		this.data = data;
 	}
-	
-	
 
 }

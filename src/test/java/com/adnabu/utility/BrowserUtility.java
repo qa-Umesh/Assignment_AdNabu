@@ -120,6 +120,10 @@ public abstract class BrowserUtility {
 		logger.info("WebElement Found returning Visible Text: " + element.getText());
 		return element.getText();
 	}
+	
+	public By getProductLocator(String ProductName) {
+		return By.xpath("//a[contains(@id,'CardLink')]");
+	}
 
 	public String getScreenshot(String screenShotName) {
 

@@ -1,7 +1,7 @@
 package com.adnabu.pojo;
 
 public class User {
-	String password;
+	private String password;
 
 	public User(String password) {
 		this.password = password;

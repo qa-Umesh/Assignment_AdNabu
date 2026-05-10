@@ -11,16 +11,13 @@ public class SearchResultPage extends BrowserUtility {
 		super(driver);
 	}
 
-	private static final By PRODUCT_LINK_LOCATOR = By.xpath("//h3[@class='card__heading h5']//a");
-
-	public String getProductText() {
-		return getVisibleText(PRODUCT_LINK_LOCATOR);
+	public String getProductText(String productName) {
+		return getVisibleText(getProductLocator(productName));
 	}
 
-	public ProductPage selectProduct() {
-		clickOn(PRODUCT_LINK_LOCATOR);
-		ProductPage productPage = new ProductPage(getDiver());
-		return productPage;
+	public ProductPage selectProduct(String productName) {
+		clickOn(getProductLocator(productName));
+		return new ProductPage(getDiver());
 
 	}
 

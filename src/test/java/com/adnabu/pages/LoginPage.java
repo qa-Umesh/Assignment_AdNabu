@@ -1,9 +1,10 @@
 package com.adnabu.pages;
 
+import static com.adnabu.constants.Env.UAT;
+
 import org.openqa.selenium.By;
 
 import com.adnabu.constants.Browser;
-import com.adnabu.constants.Env;
 import com.adnabu.utility.BrowserUtility;
 import com.adnabu.utility.PropertiesReaderUtility;
 
@@ -11,9 +12,8 @@ public class LoginPage extends BrowserUtility {
 
 	public LoginPage(Browser browserName, boolean isHeadless) {
 		super(browserName, isHeadless);
-//		goToWebsite("https://adnabu-store-assignment1.myshopify.com/");
 //		goToWebsite(JSONReaderUtility.readConfigJSON(Env.QA).getUrl());
-		goToWebsite(PropertiesReaderUtility.readConfigProperties(Env.UAT, "URl"));
+		goToWebsite(PropertiesReaderUtility.readConfigProperties(UAT, "URl"));
 
 	}
 
@@ -27,8 +27,7 @@ public class LoginPage extends BrowserUtility {
 	public HomePage loginWith(String password) {
 		enterText(PASSWORD_TEXTBOX_LOCATOR, password);
 		clickOn(ENTER_BUTTON_LOCATOR);
-		HomePage homePage = new HomePage(getDiver());
-		return homePage;
+		return new HomePage(getDiver());
 	}
 
 }
