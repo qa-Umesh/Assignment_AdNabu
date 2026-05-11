@@ -1,5 +1,31 @@
 # AdNabu QA Automation Assignment
 
+## Task 1: Test Case Design
+
+The framework includes external test artifacts and supporting documents inside the `test-data` folder.
+
+### Included Files
+- `TestCases.xlsx` → Contains detailed test scenarios and test case design.
+- Test cases are designed based on functional requirements and cover:
+  - Positive test scenarios
+  - Negative test scenarios
+  - Edge cases
+  - Validation checks
+
+### Purpose
+This document helps maintain traceability between:
+- Requirements
+- Manual test coverage
+- Automated test implementation
+
+### Folder Structure
+
+```bash
+test-data/
+└── TestCases.xlsx
+
+
+### Task 2: Test Automation
 A scalable and maintainable **Java-based Test Automation Framework** developed for the **AdNabu QA Engineer Assignment** using **Selenium WebDriver**, **TestNG**, and **Maven** following the **Page Object Model (POM)** design pattern.
 
 The framework automates the following e-commerce workflow:
