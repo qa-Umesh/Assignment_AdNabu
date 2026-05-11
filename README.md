@@ -23,6 +23,7 @@ This document helps maintain traceability between:
 ```bash
 test-data/
 └── TestCases.xlsx
+```
 
 
 ## Task 2: Test Automation
