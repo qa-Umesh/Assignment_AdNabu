@@ -12,13 +12,13 @@ public class AddToCartTest extends BaseTest {
 	private static final String PRODUCT_NAME = "The Collection Snowboard: Liquid";
 
 	@BeforeMethod()
-	public void setup() {
-		productPage = loginPage.loginWith("AdNabuQA").searchProduct(PRODUCT_NAME).selectProduct(PRODUCT_NAME);
+	public void setup()  {
+		productPage = loginPage.loginWith("AdNabuQA").searchProduct(PRODUCT_NAME).clickOnTheProductAtIndex(0);
 	}
 
 	@Test(description = "Verify user can add product to cart successfully")
 	public void AddProductToCartTest() {
-		assertEquals(productPage.addProductToCart().getCartConfirmationMessage(PRODUCT_NAME), PRODUCT_NAME);
+		assertEquals(productPage.addProductToCart().getCartConfirmationMessage(), PRODUCT_NAME);
 	}
 
 }

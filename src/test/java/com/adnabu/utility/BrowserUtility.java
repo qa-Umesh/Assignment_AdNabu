@@ -3,6 +3,8 @@ package com.adnabu.utility;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.Logger;
@@ -109,9 +111,18 @@ public abstract class BrowserUtility {
 
 	public void clickOn(By locator) {
 		logger.info("Finding the Locator: " + locator);
-		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		logger.info("WebElement Found performing click Action");
 		element.click();
+	}
+
+	public void clickOn(WebElement element) {
+		element.click();
+	}
+
+	public List<WebElement> getAllElement(By locator) {
+		List<WebElement> allElements = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+		return allElements;
 	}
 
 	public String getVisibleText(By locator) {
@@ -120,9 +131,38 @@ public abstract class BrowserUtility {
 		logger.info("WebElement Found returning Visible Text: " + element.getText());
 		return element.getText();
 	}
-	
+
+	public String getVisibleText(WebElement element) {
+		return element.getText();
+	}
+
+	public List<String> getAllVisibleText(By locator) {
+		logger.info("Finding the Locator: " + locator);
+		List<WebElement> listOfElement = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+
+		List<String> visibleTextList = new ArrayList<String>();
+		for (WebElement element : listOfElement) {
+			visibleTextList.add(getVisibleText(element));
+			return visibleTextList;
+		}
+		return null;
+
+	}
+
 	public By getProductLocator(String ProductName) {
-		return By.xpath("//a[contains(@id,'CardLink')]");
+		String[] strArray = ProductName.split(" ");
+		StringBuffer finalProductLink = new StringBuffer();
+
+		for (int i = 0; i <= strArray.length - 1; i++) {
+
+			finalProductLink.append(strArray[i].replace(":", ""));
+			if (i != strArray.length - 1) {
+				finalProductLink.append("-");
+			}
+
+		}
+		return By.xpath("//a[contains(@href,'/products/" + finalProductLink.toString().toLowerCase() + "')]");
+
 	}
 
 	public String getScreenshot(String screenShotName) {

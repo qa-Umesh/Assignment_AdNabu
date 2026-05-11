@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.adnabu.test.AddToCartTest">
+      <class name="com.adnabu.test.SearchProductTest">
         <methods>
-          <include name="AddProductToCartTest"/>
-          <include name="SetUp"/>
+          <include name="verifyValidProductSearchTest"/>
           <include name="setup"/>
+          <include name="SetUp"/>
           <include name="quite"/>
         </methods>
-      </class> <!-- com.adnabu.test.AddToCartTest -->
+      </class> <!-- com.adnabu.test.SearchProductTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
