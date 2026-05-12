@@ -16,7 +16,7 @@ public class AddToCartTest extends BaseTest {
 		productPage = loginPage.loginWith("AdNabuQA").searchProduct(PRODUCT_NAME).clickOnTheProductAtIndex(0);
 	}
 
-	@Test(description = "Verify user can add product to cart successfully")
+	@Test(description = "Verify user can add product to cart successfully",retryAnalyzer = com.adnabu.listners.MyRetryAnalyzer.class)
 	public void AddProductToCartTest() {
 		assertEquals(productPage.addProductToCart().getCartConfirmationMessage(), PRODUCT_NAME);
 	}
