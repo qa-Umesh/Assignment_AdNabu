@@ -37,7 +37,11 @@ The manual testing assignment covers:
 test-data/
 ├── JobListings.xlsx
 └── TestCases.xlsx
-Task 2: Test Automation
+```
+
+---
+
+# Task 2: Test Automation
 
 A scalable and maintainable Java-based Test Automation Framework developed for the ValuEnable QA Assignment using Selenium WebDriver, TestNG, and Maven following the Page Object Model (POM) design pattern.
 
