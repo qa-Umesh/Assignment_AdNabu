@@ -1,231 +1,152 @@
-# AdNabu QA Automation Assignment
+# ValuEnable QA Automation Assignment
 
-## Task 1: Test Case Design
+## Task 1: Manual Testing
 
-The framework includes external test artifacts and supporting documents inside the `test-data` folder.
+The project includes manual testing artifacts and supporting documents inside the `test-data` folder.
 
 ### Included Files
-- `TestCases.xlsx` → Contains detailed test scenarios and test case design.
-- Test cases are designed based on functional requirements and cover:
-  - Positive test scenarios
-  - Negative test scenarios
-  - Edge cases
-  - Validation checks
+- `JobListings.xlsx` → Contains all identified job listings and additional details.
+- `TestCases.xlsx` → Contains executed manual test cases with Pass/Fail status.
 
-### Purpose
-This document helps maintain traceability between:
-- Requirements
-- Manual test coverage
-- Automated test implementation
+---
 
-### Folder Structure
+## Scope Covered
+
+The manual testing assignment covers:
+
+- Careers page validation
+- Job listing verification
+- Apply link verification
+- Responsive testing (tablet/mobile view)
+- UI and usability validation
+
+---
+
+## Observations Identified
+
+- The provided `career.html` URL returned a 404 page.
+- The working careers page was available under `/careers`.
+- Apply links redirected to a Google Form with restricted access.
+- Tablet view showed text alignment and layout issues.
+
+---
+
+## Folder Structure
 
 ```bash
 test-data/
+├── JobListings.xlsx
 └── TestCases.xlsx
-```
+Task 2: Test Automation
 
+A scalable and maintainable Java-based Test Automation Framework developed for the ValuEnable QA Assignment using Selenium WebDriver, TestNG, and Maven following the Page Object Model (POM) design pattern.
 
-## Task 2: Test Automation
-A scalable and maintainable **Java-based Test Automation Framework** developed for the **AdNabu QA Engineer Assignment** using **Selenium WebDriver**, **TestNG**, and **Maven** following the **Page Object Model (POM)** design pattern.
+The framework automates the following workflow:
 
-The framework automates the following e-commerce workflow:
+Open “Get in Touch” form
+Submit the form successfully
+Validate error handling for invalid email input
 
-- Search for a product
-- Add product to cart successfully
+The project is designed using reusable components and automation best practices.
 
-The project is designed with reusable components, reporting, logging, screenshots, and GitHub Actions integration following automation best practices.
-
----
-
-# 🚀 Project Overview
+🚀 Project Overview
 
 This framework includes:
 
-- Selenium WebDriver automation
-- TestNG execution
-- Page Object Model (POM)
-- Explicit waits (No hardcoded sleeps)
-- Reusable utility methods
-- Extent Reports integration
-- Screenshot capture on failures
-- Log4j logging
-- Maven build management
-- GitHub Actions CI integration
+Selenium WebDriver automation
+TestNG execution
+Page Object Model (POM)
+Explicit waits
+Reusable utility methods
+Maven build management
+Assertion validations
+Clean and maintainable structure
+👨‍💻 About Me
 
----
-
-# 👨‍💻 About Me
-
-Hi, My name is **Umesh Kute**.
+Hi, My name is Umesh Kute.
 
 I have experience in:
-- Automation Testing using Selenium WebDriver
-- API Testing using Postman
-- Java Programming
-- TestNG Framework Design
 
----
-
-# 🔗 Author
-
-- GitHub: https://github.com/qa-Umesh
-- LinkedIn: https://www.linkedin.com/in/-umesh-
-- Email: umeshkute453@gmail.com
-
----
-
-# 🛠️ Tech Stack
-
-| Technology | Usage |
-|---|---|
-| Java | Programming Language |
-| Selenium WebDriver | UI Automation |
-| TestNG | Test Framework |
-| Maven | Build Tool |
-| Extent Reports | Reporting |
-| Log4j | Logging |
-| GitHub Actions | CI/CD |
-| Apache POI | Excel Handling |
-
----
-
-# 📁 Framework Structure
-
-```text
+Automation Testing using Selenium WebDriver
+API Testing using Postman
+Java Programming
+TestNG Framework Design
+Manual Testing
+🔗 Author
+GitHub: https://github.com/qa-Umesh
+LinkedIn: https://www.linkedin.com/in/-umesh-
+Email: umeshkute453@gmail.com
+🛠️ Tech Stack
+Technology	Usage
+Java	Programming Language
+Selenium WebDriver	UI Automation
+TestNG	Test Framework
+Maven	Build Tool
+📁 Framework Structure
 src
  ├── test/java
- │    ├── com.adnabu.pages
- │    ├── com.adnabu.tests
- │    ├── com.adnabu.utils
- │    ├── com.adnabu.listeners
- │    ├── com.adnabu.constants
- │    └── com.adnabu.pojo
+ │    ├── com.valuenable.pages
+ │    ├── com.valuenable.tests
+ │    ├── com.valuenable.utils
+ │    ├── com.valuenable.constants
+ │    └── com.valuenable.enums
  │
- ├── test/resources
- │    └── log4j2.xml
- │
- ├── screenshots
- ├── Reports
- └── logs
-```
-
----
-
-# ✅ Features
-
-- Page Object Model (POM) architecture
-- Modular and reusable framework
-- Explicit waits implementation
-- Screenshot capture on failures
-- Extent HTML Reports
-- Logging using Log4j
-- Maven Surefire execution
-- GitHub Actions integration
-- Clean and maintainable code structure
-
----
-
-# ⚙️ Prerequisites
+ ├── Screenshots
+ └── test-data
+✅ Features
+Page Object Model (POM) architecture
+Modular and reusable framework
+Explicit waits implementation
+Assertion validations
+Clean and maintainable code structure
+Separate positive and negative test scenarios
+⚙️ Prerequisites
 
 Before running the project, ensure the following tools are installed:
 
-- Java 11 or above
-- Maven
-- Git
-- Google Chrome Browser
-
----
-
-# 📥 Installation & Setup
-
-## Step 1: Clone Repository
-
-```bash
-git clone https://github.com/qa-Umesh/Assignment_AdNabu.git
-```
-
----
-
-## Step 2: Navigate to Project Folder
-
-```bash
-cd Assignment_AdNabu
-```
-
----
-
-# ▶️ Execute Automation Tests
+Java 11 or above
+Maven
+Git
+Google Chrome Browser
+📥 Installation & Setup
+Step 1: Clone Repository
+git clone https://github.com/qa-Umesh/ValuEnable_Assignment.git
+Step 2: Navigate to Project Folder
+cd ValuEnable_Assignment
+▶️ Execute Automation Tests
 
 Run the following command to execute the automation suite:
 
-```bash
-mvn clean test -Dbrowser=chrome -Disheadless=true
-```
+mvn clean test
 
----
+OR execute testng.xml directly from the IDE.
 
-# 📊 Test Reports
+📊 Console Output
 
-The framework generates Extent HTML Reports after execution.
+The framework prints execution status in the console.
 
-You can view the latest published report here:
+Example:
+Tests run: 2
+Failures: 0
+BUILD SUCCESS
+📸 Screenshots
 
-👉 https://qa-umesh.github.io/Assignment_AdNabu/Report.html
+Execution screenshots and console output screenshots are included in the submission.
 
----
-
-# 📸 Screenshots
-
-Failure screenshots are automatically captured inside:
-
-```text
-/screenshots/
-```
-
----
-
-# 📝 Logging
-
-Execution logs are generated inside:
-
-```text
-/logs/automation.log
-```
-
----
-
-# 🤖 GitHub Actions Integration
-
-This project is integrated with GitHub Actions for automated execution.
-
-The workflow:
-- Executes automation tests
-- Generates Extent Reports
-- Publishes reports to GitHub Pages automatically
-
----
-
-# 🌐 GitHub Repository
+🌐 GitHub Repository
 
 Repository Link:
 
-👉 https://github.com/qa-Umesh/Assignment_AdNabu
+👉 https://github.com/qa-Umesh/ValuEnable_Assignment
 
----
+📌 Assignment Coverage
+Automated Scenarios Covered
 
-# 📌 Assignment Coverage
+✅ Successful form submission
+✅ Invalid email validation test
 
-## Automated Scenario Covered
-
-✅ Search product successfully  
-✅ Add product to cart successfully
-
----
-
-# 📌 Notes
-
-- This framework was developed specifically for the AdNabu QA Assignment.
-- The framework focuses on readability, maintainability, and automation best practices.
-- No hardcoded waits (`Thread.sleep`) are used in the framework.
-- Reports are automatically published using GitHub Pages for easy access.
+📌 Notes
+This framework was developed specifically for the ValuEnable QA Assignment.
+The framework focuses on readability, maintainability, and automation best practices.
+Manual testing observations were documented based on the current website behavior.
+The provided assignment URLs differed from the current website structure and findings were documented accordingly.
